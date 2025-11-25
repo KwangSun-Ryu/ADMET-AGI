@@ -27,7 +27,7 @@ Project_Folder/
 1) Google Drive에서 압축본 받기
 
    - `25TOXMC_Blowfish_v1.0.9-AWQ`, `ChemCoTBench` 압축본을 Google Drive에서 먼저 받아 `25ADMET/` 아래에 풀어둔다.
-   - Google Drive URL:
+   - Google Drive URL: `https://drive.google.com/file/d/1IWv3Ol3kaWnWGiiWY6tKK3qhgrHBvkZQ/view?usp=drive_link`
    - 압축 해제 후 위치 예시: `Project_Folder/25TOXMC_Blowfish_v1.0.9-AWQ/`, `Project_Folder/ChemCoTBench/ `
 2) VLLM 서버 기동
 
