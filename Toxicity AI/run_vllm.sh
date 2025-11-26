@@ -4,7 +4,7 @@
 docker run -it --rm \
   --gpus all \
   -p 30002:8000 \
-  -v /home/raid/jason/25ADMET:/workspace:ro \
+  -v "/mnt/e/Google Drive/External SSD/HealthCare/ADMET/코드/ADMET-AGI/Toxicity AI":/workspace:rw \
   -e CUDA_VISIBLE_DEVICES=0 \
   -e TP_SIZE=1 \
   -e MODEL_PATH=/workspace/25TOXMC_Blowfish_v1.0.9-AWQ \
