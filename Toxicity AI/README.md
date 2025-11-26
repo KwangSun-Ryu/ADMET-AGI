@@ -2,9 +2,19 @@
 
 ## 프로젝트 개요
 
-- 목적: 신약 개발 단계(기초 연구·비임상 실험)에서 ADMET(흡수·분포·대사·배설·독성) 예측을 자동화하는 인지·추론형 AGI 에이전트 플랫폼을 구축한다.
-- UNIVA 역할: Self-evolving Agent, Generalized ADMET Inference 베이스라인, Toxicity AI 프로토타입을 설계·개발해 능동적 의사결정과 ADMET 전주기 통합 예측 부재 문제를 해소한다.
-- 모델/런타임: `25TOXMC_Blowfish_v1.0.9-AWQ`를 VLLM(OpenAI 호환)으로 서비스하고, 평가 스크립트는 `openai`/`AsyncOpenAI` 클라이언트로 호출한다.
+- **목적**: 신약 개발 초기 단계(기초 연구–비임상 실험)에서 요구되는 ADMET(흡수·분포·대사·배설·독성) 특성 분석을 자동화하기 위해, 인지·추론 기반 AGI 에이전트 플랫폼을 구축한다. 본 플랫폼은 대규모 독성·약물동태 데이터와 온톨로지 기반 지식을 통합하여, 분자 수준의 ADMET 프로파일을 자율적으로 추론·해석할 수 있는 차세대 AI 시스템을 지향한다.
+- **구현 내용**: 1차년도 1단계 목표로 Generalized ADMET Inference 베이스라인과 Toxicity AI 프로토타입 모델을 구축한다. 이를 통해 기존 신약개발 과정에서 반복되는 수작업 기반 독성 예측 및 ADMET 전주기 분석의 단절 문제를 해소하고, 능동적 의사결정이 가능한 self-evolving ADMET AI 에이전트 개발의 초석을 마련한다.
+
+## 모델/런타임
+
+- Toxicity AI Prototype
+- 25TOXMC_Blowfish_v1.0.9-AWQ
+- VLLM(OpenAI 호환)으로 서비스
+- 모든 평가 스크립트(mmlu_toxic, chem_cot, mobile_eval_e)는 openai/AsyncOpenAI 클라이언트로 호출
+- Generalized ADMET Inference Baseline
+- Toxicity AI
+- VLLM 동시 구동 가능 (포트만 다르게)
+- ADMET 전반(ADME + Toxicity 통합 전주기 inference 테스트에 사용
 
 ## 디렉터리 트리 & 파일 설명
 
