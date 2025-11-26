@@ -1,4 +1,8 @@
+## 공통 Ignore
+AGENTS.md
+
 ## Toxicity AI
 Toxicity AI/*.zip
 Toxicity AI/25TOXMC_Blowfish_v1.0.9-AWQ/
 Toxicity AI/ChemCoTBench/
+
