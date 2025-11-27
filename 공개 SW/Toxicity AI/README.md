@@ -19,7 +19,7 @@
 ## 디렉터리 트리 & 파일 설명
 
 ```
-Project_Folder/
+Toxicity AI/
   ├─ ChemCoTBench/                 # HF dump된 ChemCoTBench 로컬 데이터 (Google Drive에서 다운)
   ├─ 25TOXMC_Blowfish_v1.0.9-AWQ/  # AWQ 양자화 모델 가중치 (Google Drive에서 다운)
   ├─ utils.py                      # JSONL 저장, EM 계산, 비동기 호출, 결과 요약, <think> 제거
@@ -37,7 +37,7 @@ Project_Folder/
 1) Google Drive에서 압축본 받기
 
    - `25TOXMC_Blowfish_v1.0.9-AWQ`, `ChemCoTBench` 압축본을 Google Drive에서 먼저 받아 `25ADMET/` 아래에 풀어둔다.
-   - Google Drive URL: `https://drive.google.com/file/d/1IWv3Ol3kaWnWGiiWY6tKK3qhgrHBvkZQ/view?usp=drive_link`
+   - Google Drive URL: [Google Drive](https://drive.google.com/file/d/1IWv3Ol3kaWnWGiiWY6tKK3qhgrHBvkZQ/view?usp=drive_link)
    - 압축 해제 후 위치 예시: `Project_Folder/25TOXMC_Blowfish_v1.0.9-AWQ/`, `Project_Folder/ChemCoTBench/ `
 2) VLLM 서버 기동
 
