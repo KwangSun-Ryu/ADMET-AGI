@@ -16,7 +16,7 @@
 
   - **반복 횟수**: 100회
   - **평가 지표**: ROC-AUC
-  - **특성 선택**: `SelectFromModel(threshold="median")`
+  - : `SelectFromModel(threshold="median")`
 
 ## 디렉터리 트리 & 파일 설명
 
