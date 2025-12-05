@@ -11,7 +11,6 @@
 - 25TOXMC_Blowfish_v1.0.9-AWQ
 - VLLM(OpenAI 호환)으로 서비스
 - 모든 평가 스크립트(mmlu_toxic, chem_cot, mobile_eval_e)는 openai/AsyncOpenAI 클라이언트로 호출
-- Generalized ADMET Inference Baseline
 - Toxicity AI
 - VLLM 동시 구동 가능 (포트만 다르게)
 - ADMET 전반(ADME + Toxicity 통합 전주기 inference 테스트에 사용
