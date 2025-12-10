@@ -22,6 +22,9 @@ def save_jsonl(data_list, out_path):
 def compute_em_score(pred, reference):
     return 1 if pred == reference else 0
 
+def compute_em_score_mmlu(pred, reference):
+    return 1 if pred in reference else 0
+
 # ==========================
 # Summary
 # ==========================
@@ -43,7 +46,7 @@ async def call_model_async(messages, client, retries=3, initial_delay=1.0):
             resp = await client.chat.completions.create(
                 model="25TOXMC_Blowfish_v1.0.9-AWQ",
                 messages=messages,
-                temperature=0.6,
+                temperature=0.0,
                 top_p=0.95,
                 stream=False
             )
@@ -67,11 +70,11 @@ async def run_concurrent_worker(data, build_messages_func, client, concurrency=1
             out = await call_model_async(messages, client)
             # <think> 제거 + JSON 파싱
             try:
-                out_clean = re.sub(r"<think>.*?</think>", "", out, flags=re.DOTALL).strip()
+                out_clean = re.sub(r".*?</think>", "", out, flags=re.DOTALL).strip()
                 out_json = json.loads(out_clean)
                 results[i] = out_json.get("output")
             except:
-                results[i] = None
+                results[i] = out_clean
 
     tasks = [asyncio.create_task(worker(i)) for i in range(len(data))]
     for f in tqdm(asyncio.as_completed(tasks), total=len(data), desc="추론 진행중"):

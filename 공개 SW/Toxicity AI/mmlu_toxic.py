@@ -1,7 +1,7 @@
 # MMLU_toxic.py
 import json
 import asyncio
-from utils import run_concurrent_worker, save_jsonl, compute_em_score, summarize_scores
+from utils import run_concurrent_worker, save_jsonl, compute_em_score_mmlu, summarize_scores
 import openai
 import os
 from dotenv import load_dotenv
@@ -29,7 +29,7 @@ def main():
     results = []
     for i, item in enumerate(data):
         pred = outputs[i]
-        em = compute_em_score(pred, item.get("answer", []))
+        em = compute_em_score_mmlu(pred, item.get("answer", []))
         results.append({
             "id": item.get("id", i),
             "prompt": item.get("prompt"),
